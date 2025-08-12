@@ -4,6 +4,10 @@ import {http, fallback} from 'viem';
 import {OGenieAbi} from './abis/OGenieAbi';
 
 export default createConfig({
+  database: {
+    kind: "postgres",
+    connectionString: `postgresql://postgres:${process.env.SUPABASE_DATABASE_PASSWORD}@db.xssdyzupdtozgdqnsfte.supabase.co:5432/postgres`,
+  },
   chains: {
     mainnet: {
       id: 1,
