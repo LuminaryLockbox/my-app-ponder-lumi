@@ -6,7 +6,7 @@ import {OGenieAbi} from './abis/OGenieAbi';
 export default createConfig({
   database: {
     kind: "postgres",
-    connectionString: `postgresql://postgres:${process.env.SUPABASE_DATABASE_PASSWORD}@db.xssdyzupdtozgdqnsfte.supabase.co:5432/postgres`,
+    connectionString: process.env.DATABASE_URL,
   },
   chains: {
     mainnet: {
