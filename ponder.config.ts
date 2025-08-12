@@ -7,6 +7,10 @@ export default createConfig({
   database: {
     kind: "postgres",
     connectionString: process.env.DATABASE_URL,
+    poolConfig: {
+      max: 30,
+      ssl: { rejectUnauthorized: false }
+    },
   },
   chains: {
     mainnet: {
