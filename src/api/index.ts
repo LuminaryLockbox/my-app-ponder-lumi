@@ -7,6 +7,14 @@ import {replaceBigInts} from '@ponder/utils';
 
 const app = new Hono();
 
+app.get('/', c => {
+  return c.text('Ponder API is running');
+});
+
+app.get('/health', c => {
+  return c.json({ status: 'healthy' });
+});
+
 app.get('/tokens/:address', async c => {
   const address = c.req.param('address');
 
