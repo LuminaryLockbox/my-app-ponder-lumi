@@ -11,8 +11,8 @@ app.get('/', c => {
   return c.text('Ponder API is running');
 });
 
-app.get('/health', c => {
-  return c.json({ status: 'healthy' });
+app.get('/hello', c => {
+  return c.json({ status: 'hello' });
 });
 
 app.get('/tokens/:address', async c => {
