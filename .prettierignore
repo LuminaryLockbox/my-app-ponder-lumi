@@ -1,0 +1,9 @@
+# Ignore artifacts:
+build
+coverage
+.ponder
+/**/dist/
+/tmp/
+/node_modules/
+/**/out/
+/**/cache/
